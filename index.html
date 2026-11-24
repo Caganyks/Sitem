@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çağan | Kişisel Web Sitesi</title>
+    <!-- Sekme Simgesi (Favicon) - Maskot Görseli -->
+    <link rel="icon" type="image/jpeg" href="resimler/Owl_mascot_vector_illustration_02f2a54f.jpg">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En Üstte Sabit Duran Menü -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#kapak" class="nav-logo">Çağan</a>
+            <nav class="nav-menu">
+                <a href="#kapak" class="nav-link">Kapak</a>
+                <a href="#hakkimda" class="nav-link">Hakkımda</a>
+                <a href="#ilgi-alanlari" class="nav-link">İlgi Alanlarım</a>
+                <a href="#iletisim" class="nav-link">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Bölüm: Kapak (Tam Ekran Yüksekliğinde) -->
+    <section class="section-kapak" id="kapak">
+        <div class="kapak-bg-wrapper">
+            <img src="resimler/Owl_looking_at_landscape_23e2de0b.jpg" alt="Tepeden vadiyi, müzik sahnesini ve spor alanlarını izleyen baykuş manzarası" class="kapak-image">
+            <div class="kapak-overlay"></div>
+        </div>
+        <div class="kapak-content">
+            <h1 class="ana-baslik">Çağan</h1>
+            <p class="kapak-tanitim">Teknoloji, tasarım ve sanatın kesiştiği noktada yeni deneyimler üreten bir keşif yolculuğu.</p>
+            <a href="#hakkimda" class="kapak-btn">Beni Tanıyın</a>
+        </div>
+    </section>
+
+    <!-- 2. Bölüm: Hakkımda -->
+    <section class="section-hakkimda" id="hakkimda">
+        <div class="site-container">
+            <div class="hakkimda-grid">
+                <div class="hakkimda-image-wrap">
+                    <img src="resimler/Owl_mascot_vector_illustration_02f2a54f.jpg" alt="Geometrik ve sevimli baykuş maskot vektör çizimi" class="mascot-img">
+                </div>
+                <div class="hakkimda-text">
+                    <h2 class="bolum-baslik">Hakkımda</h2>
+                    <p class="hakkimda-paragraf">Web ve yazılım dünyasına meraklı bir geliştirici olarak dijital projeler üretiyorum. Boş zamanlarımda müzik dinlemek, spor yapmak ve yeni lezzetler keşfetmek bana ilham veriyor. Burada hem kendimi geliştirdiğim alanları hem de ilgi duyduğum konuları sizlerle paylaşıyorum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Bölüm: İlgi Alanlarım (Üç Kart) -->
+    <section class="section-ilgi-alanlari" id="ilgi-alanlari">
+        <div class="site-container">
+            <h2 class="bolum-baslik ortala">İlgi Alanlarım</h2>
+            <div class="kart-grid">
+                <!-- Kart 1: Müzik -->
+                <article class="kart">
+                    <div class="kart-gorsel-wrap">
+                        <img src="resimler/Owl_playing_music_vector_illustr…_59f3c6ee.jpg" alt="Kulaklıkla nostaljik pikap başında plak dinleyen baykuş illüstrasyonu" class="kart-gorsel">
+                    </div>
+                    <div class="kart-govde">
+                        <h3 class="kart-baslik">Müzik</h3>
+                        <p class="kart-metin">Plak koleksiyonu ve farklı müzik türlerini keşfederek günün ritmini yakalamak en büyük tutkum.</p>
+                    </div>
+                </article>
+
+                <!-- Kart 2: Spor -->
+                <article class="kart">
+                    <div class="kart-gorsel-wrap">
+                        <img src="resimler/Owl_playing_music_vector_illustr…_d798d557.jpg" alt="DJ mikser masasında ritim ve enerjiyle miks yapan baykuş illüstrasyonu" class="kart-gorsel">
+                    </div>
+                    <div class="kart-govde">
+                        <h3 class="kart-baslik">Spor</h3>
+                        <p class="kart-metin">Hareketli ve aktif bir yaşam tarzını benimseyerek zihnimi ve bedenimi her zaman dinamik tutuyorum.</p>
+                    </div>
+                </article>
+
+                <!-- Kart 3: Yemek -->
+                <article class="kart">
+                    <div class="kart-gorsel-wrap">
+                        <img src="resimler/Baykus_cizgi_romani_muzik_temali_8e9050de.jpg" alt="Eğlenceli karelerle baykuşun neşeli hikayesini canlandıran çizgi roman şeridi" class="kart-gorsel">
+                    </div>
+                    <div class="kart-govde">
+                        <h3 class="kart-baslik">Yemek</h3>
+                        <p class="kart-metin">Farklı kültürlerin lezzetlerini tanımak ve mutfakta yeni tatlar denemekten büyük keyif alıyorum.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Bölüm: İletişim -->
+    <section class="section-iletisim" id="iletisim">
+        <div class="site-container">
+            <h2 class="bolum-baslik ortala">İletişim</h2>
+            <p class="iletisim-aciklama">Benimle iletişime geçmek veya projelerimi incelemek için aşağıdaki bağlantıları kullanabilirsiniz.</p>
+            <div class="iletisim-baglantilar">
+                <a href="mailto:caganyksl1@gmail.com" class="iletisim-kart">
+                    <span class="iletisim-etiket">E-posta</span>
+                    <span class="iletisim-deger">caganyksl1@gmail.com</span>
+                </a>
+                <a href="https://github.com/Caganyks" target="_blank" rel="noopener noreferrer" class="iletisim-kart">
+                    <span class="iletisim-etiket">GitHub</span>
+                    <span class="iletisim-deger">github.com/Caganyks</span>
+                </a>
+                <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fan-y%C3%BCksel-444a49379/" target="_blank" rel="noopener noreferrer" class="iletisim-kart">
+                    <span class="iletisim-etiket">LinkedIn</span>
+                    <span class="iletisim-deger">linkedin.com/in/çağan-yüksel</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sayfa Altı -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <p class="footer-not">Bu sitedeki görseller yapay zekâ ile üretildi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

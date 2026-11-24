@@ -1,0 +1,421 @@
+/* ==========================================================================
+   AGENTS.md Kurallarına Uygun Stil Dosyası
+   Renkler:
+     - Zemin : #F4EACE
+     - Yazı  : #1A2844
+     - Vurgu : #EC735E
+   Font: 'Inter', sans-serif
+   Maksimum genişlik: 1100px (ortalanmış)
+   Kartlar: 12px yuvarlatılmış köşe, ince açık gri kenarlık, hafif gölge
+   ========================================================================== */
+
+:root {
+    --renk-zemin: #F4EACE;
+    --renk-yazi: #1A2844;
+    --renk-vurgu: #EC735E;
+    --renk-kenarlik: rgba(26, 40, 68, 0.12);
+    --renk-kart-zemin: #FAF4E5;
+    --renk-golge: rgba(26, 40, 68, 0.06);
+    --renk-nav-zemin: rgba(244, 234, 206, 0.92);
+}
+
+/* Temel Sıfırlama */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--renk-zemin);
+    color: var(--renk-yazi);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Kapsayıcı (En çok 1100px ve ortada) */
+.site-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Bölümler Arasında Geniş Boşluk */
+section {
+    padding: 100px 0;
+}
+
+/* Sabit Menü (Navbar) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--renk-nav-zemin);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--renk-kenarlik);
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 20px var(--renk-golge);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--renk-yazi);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.nav-logo:hover {
+    color: var(--renk-vurgu);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--renk-yazi);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--renk-vurgu);
+}
+
+/* 1. Bölüm: Kapak (Tam Ekran Yüksekliğinde) */
+.section-kapak {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 1.5rem 40px 1.5rem;
+    overflow: hidden;
+}
+
+.kapak-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.kapak-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.kapak-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(26, 40, 68, 0.45) 0%,
+        rgba(26, 40, 68, 0.7) 60%,
+        rgba(26, 40, 68, 0.92) 100%
+    );
+}
+
+.kapak-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    color: #F4EACE;
+}
+
+/* Çok Büyük ve Kalın Ana Başlık */
+.ana-baslik {
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    color: #F4EACE;
+}
+
+.kapak-tanitim {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2.2rem;
+    color: rgba(244, 234, 206, 0.92);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kapak-btn {
+    display: inline-block;
+    background-color: var(--renk-vurgu);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.kapak-btn:hover {
+    background-color: #d85c48;
+    transform: translateY(-2px);
+}
+
+/* Bölüm Başlıkları */
+.bolum-baslik {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--renk-yazi);
+    margin-bottom: 1.5rem;
+}
+
+.bolum-baslik.ortala {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+/* 2. Bölüm: Hakkımda */
+.hakkimda-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.hakkimda-image-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.mascot-img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--renk-kenarlik);
+    box-shadow: 0 8px 24px var(--renk-golge);
+}
+
+.hakkimda-paragraf {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--renk-yazi);
+}
+
+/* 3. Bölüm: İlgi Alanlarım (Kartlar) */
+.kart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.kart {
+    background-color: var(--renk-kart-zemin);
+    border-radius: 12px;
+    border: 1px solid var(--renk-kenarlik);
+    box-shadow: 0 4px 12px var(--renk-golge);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kart:hover {
+    transform: translateY(-4px);
+    border-color: var(--renk-vurgu);
+    box-shadow: 0 8px 20px rgba(236, 115, 94, 0.15);
+}
+
+.kart-gorsel-wrap {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.kart-gorsel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kart-govde {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex-grow: 1;
+}
+
+.kart-baslik {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--renk-yazi);
+    letter-spacing: -0.01em;
+}
+
+.kart-metin {
+    font-size: 0.95rem;
+    color: var(--renk-yazi);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 4. Bölüm: İletişim */
+.iletisim-aciklama {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--renk-yazi);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iletisim-baglantilar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.iletisim-kart {
+    background-color: var(--renk-kart-zemin);
+    border-radius: 12px;
+    border: 1px solid var(--renk-kenarlik);
+    box-shadow: 0 4px 12px var(--renk-golge);
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.iletisim-kart:hover {
+    transform: translateY(-3px);
+    border-color: var(--renk-vurgu);
+}
+
+.iletisim-etiket {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--renk-vurgu);
+}
+
+.iletisim-deger {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--renk-yazi);
+    word-break: break-all;
+}
+
+/* Sayfa Altı Notu */
+.site-footer {
+    border-top: 1px solid var(--renk-kenarlik);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-not {
+    font-size: 0.9rem;
+    color: var(--renk-yazi);
+    opacity: 0.75;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 850px) {
+    .hakkimda-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .kart-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .bolum-baslik.ortala {
+        margin-bottom: 2.5rem;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.85rem 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 0.88rem;
+    }
+
+    .mascot-img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Hareketi Azaltmayı Tercih Eden Kullanıcılar */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
